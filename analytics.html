@@ -37,6 +37,24 @@
         <section class="page-section portfolio" id="portfolio" style="padding: 6.3rem 0 0 0" >
                 <div class="row justify-content-center">
                   <iframe src="https://adam.on.gooddata.com/dashboards/embedded/#/workspace/menbjd8qat0jje3gwcly5634n8rhzh7v/dashboard/aaAxaLgZdXxf?showNavigation=true&setHeight=700" height="700px" width="100%" frameborder="0"></iframe>
+                  <script>
+                    var createCookie = function(name, value, days) {
+                        var expires, date;
+                        date = new Date();
+                        date.setTime(date.getTime()+(days*24*60*60*1000));
+                        expires = "; expires="+date.toGMTString();
+                        document.cookie = name+"="+value+expires+"; path=/";
+                    };
+            
+                    var safariFixCookie = "safari_fix";
+                    var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent); // safari detection
+                    if (is_safari) {
+                        if (document.cookie.indexOf(safariFixCookie) == -1) {
+                            createCookie(safariFixCookie, 'fixed', 365);
+                            window.location.replace("https://adam.on.gooddata.com/cookiesFix.html");
+                            }
+                        }
+                    </script>
                 </div>
         </section>
         <!-- Footer-->
